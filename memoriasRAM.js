@@ -37,5 +37,4 @@ let producto01 = new MemoriaRAM01(
        "DDR5"   
 )
 
-console.log(" ")
-producto01.info()
+
