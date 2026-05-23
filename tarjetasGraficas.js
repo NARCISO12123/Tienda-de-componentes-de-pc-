@@ -61,9 +61,17 @@ let graficaAMD = new NuevaGrafica(
     "rx 7900 xt",
     32,
     false
-)
-graficaAMD.info();
-console.log(" ")
 
-grafica.info();
-console.log(" ")
+)
+
+let graficas = [grafica, graficaAMD];
+
+// crea un div donde almacena los datos dados
+let tarjetaGraficaAMD = document.createElement("div");
+tarjetaGraficaAMD.innerHTML = `
+    <h3>Marca: ${grafica.marca}</h3>
+    <h3>Modelo: ${grafica.modelo}</h3>
+    <h3>anio: ${grafica.anioDeSalida}</h3>
+    <h3>Memoria Vram: ${grafica.cantidadDeMemoria}</h3>
+    <h3>RGB: ${grafica.rgb}</h3>` // anade elementos al div
+document.body.appendChild(tarjetaGraficaAMD) // muestra en pantalla
