@@ -28,7 +28,7 @@ class NuevaGrafica extends TarjetaGraficas {
         this.marca = marca.toUpperCase()
         this.modelo = modelo.toUpperCase();
         this.cantidadDeMemoria = cantidadDeMemoria + " GB"
-        this.imagen = "Anadir Url img";
+        this.imagen = imagen;
     }
 
     info(){
@@ -48,24 +48,66 @@ class NuevaGrafica extends TarjetaGraficas {
 }
 
 // Tarjetas graficas disponibles
-let grafica = new NuevaGrafica("nvidia", 2025, "rtx 5080", 16, true)
-let graficaAMD = new NuevaGrafica("amd", 2025, "rx 7900 xt", 32, false)
-let graficaIntel = new NuevaGrafica( "intel", 2024, "arc b580", 12, false)
-let graficaNvidia2 = new NuevaGrafica("nvidia", 2024, "rtx 4070", 12, true);
-let graficaAMD2 = new NuevaGrafica("amd", 2024, "rx 7800 xt", 16, false);
+// idea conectar una base de datos de productos.
+let grafica = new NuevaGrafica(
+    "nvidia", 
+    2025, 
+    "rtx 5080", 
+    16, 
+    true,
+   "https://www.wepc.com/wp-content/uploads/2025/01/RTX-5080-WePC-8-of-14-300x200.jpg"
+)
+let graficaAMD = new NuevaGrafica(
+    "amd", 
+    2025, 
+    "rx 7900 xt", 
+    32, 
+    false,
+    "https://cdn.mos.cms.futurecdn.net/XpB9PMsJPnDC8apR2B4mgR.jpg"
+)
+let graficaIntel = new NuevaGrafica(
+    "intel", 
+    2024, 
+    "arc b580", 
+    12, 
+    false,
+    "https://i.pcmag.com/imagery/reviews/04LEavYRycfy8230UD1jbYg-1.fit_lpad.size_238x139.v1733951141.jpg"
+)
+let graficaNvidia2 = new NuevaGrafica(
+    "nvidia", 
+    2024, 
+    "rtx 4070", 
+    12, 
+    true,
+    "https://cdn.mos.cms.futurecdn.net/W3BvPQi5gkHxPuF4bjsXDd.jpg"
+);
+let graficaAMD2 = new NuevaGrafica(
+    "amd", 
+    2024, 
+    "rx 7800 xt", 
+    16, 
+    false,
+    "https://www.dexerto.com/cdn-image/wp-content/uploads/2023/08/25/RX-7700-XT.jpg?width=1200&quality=60&format=auto"
+);
 
 
 // funcion de flecha, recorre las instancias
 // para luego mostrar sus datos.
 let graficas = [grafica, graficaAMD, graficaIntel, graficaNvidia2, graficaAMD2];
 graficas.forEach(g => {
+    
     // crea un div para almacenar los datos
     let tarjeta = document.createElement("div")
+     
+    // anade elementos al div
     tarjeta.innerHTML = `
+    <img src="${g.imagen}" width="200">
     <h3>Marca: ${g.marca}</h3>
     <h3>Modelo: ${g.modelo}</h3>
     <h3>anio: ${g.anioDeSalida}</h3>
     <h3>Memoria Vram: ${g.cantidadDeMemoria}</h3>
-    <h3>RGB: ${g.rgb}</h3>` // anade elementos al div
+    <h3>RGB: ${g.rgb}</h3>
+    ` 
+
     document.body.appendChild(tarjeta) // muestra en pantalla
     })
