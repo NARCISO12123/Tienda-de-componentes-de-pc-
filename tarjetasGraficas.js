@@ -28,7 +28,6 @@ class NuevaGrafica extends TarjetaGraficas {
         this.marca = marca.toUpperCase()
         this.modelo = modelo.toUpperCase();
         this.cantidadDeMemoria = cantidadDeMemoria + " GB"
-        this.imagen = imagen;
     }
 
     info(){
@@ -108,6 +107,5 @@ graficas.forEach(g => {
     <h3>Memoria Vram: ${g.cantidadDeMemoria}</h3>
     <h3>RGB: ${g.rgb}</h3>
     ` 
-
-    document.body.appendChild(tarjeta) // muestra en pantalla
+    document.getElementById("contenedorGraficas").appendChild(tarjeta) // muestra en pantalla
     })

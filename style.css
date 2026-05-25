@@ -1,0 +1,20 @@
+#contenedorGraficas{
+    width: 400%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#contenedorCPU{
+    width: 400%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#contenedorRAM{
+    width: 400%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
