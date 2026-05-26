@@ -42,7 +42,7 @@ let amdProcesador = new NuevoProcesador(
     "Serie 7000",
     12,
     4.7,
-    "https://img.pccomponentes.com/pcblog/1727128800000/mejores-amd-ryzen-7000-comprar-5.jpg"
+    "https://www.amd.com/content/dam/amd/en/images/products/processors/ryzen/2841053-amd-ryzen-5-7600-x3d.jpg"
 )
 let intelProcesador = new NuevoProcesador(
     "intel",
@@ -65,7 +65,7 @@ let amdProcesador2 = new NuevoProcesador("amd",
     "Serie 7000", 
     16, 
     4.5, 
-    "https://i.ebayimg.com/images/g/lSUAAeSw2FtpN2r6/s-l225.jpg"
+    "https://images.pcel.com/600/Hardware-Procesadores-AMD-100-100000592BOX-460320-6gW7Dop2e2YYPVNa.jpg"
 );
 
 let amdProcesador3 = new NuevoProcesador("amd", 
@@ -73,7 +73,7 @@ let amdProcesador3 = new NuevoProcesador("amd",
     "Serie 7000", 
     24, 
     5.7,
-    "https://i5.walmartimages.com/seo/AMD-Ryzen-9-9950X3D-4-3-GHz-16-core-32-threads-128-MB-cache-Socket-AM5-Box_e93ef900-ef47-4a19-a5af-52fc9eb4c202.f6e557d9c987089594771bbf3518d5b2.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF"
+    "https://wuuju.co/cdn/shop/files/ProyectoQuitarfondo_7f29b8e5-df44-4489-abca-82ffbaeeae0c_768x768.png?v=1709757587%20768w,//wuuju.co/cdn/shop/files/ProyectoQuitarfondo_7f29b8e5-df44-4489-abca-82ffbaeeae0c_1024x1024.png?v=1709757587%201024w,//wuuju.co/cdn/shop/files/ProyectoQuitarfondo_7f29b8e5-df44-4489-abca-82ffbaeeae0c_1440x1440.png?v=1709757587%201440w"
 );
 
 // agregamos los procesadores a una lista
@@ -84,6 +84,8 @@ arregloProcesadores.forEach(p => {
     
     // creamos un div para cada procesador
     let tarjetaProcesadores = document.createElement("div"); 
+    tarjetaProcesadores.classList.add("tarjetaDisenio")
+
     tarjetaProcesadores.innerHTML = `
     <img src="${p.imagen}" width="200"></img>
     <h3>Procesador: ${p.marca} ${p.linea}</h3>

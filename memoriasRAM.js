@@ -74,6 +74,7 @@ let arreglo = [producto01, producto02, producto03, producto04, producto05]
 arreglo.forEach(Mr => {
    
     let tarjetaMemoriaRam = document.createElement("div");
+    tarjetaMemoriaRam.classList.add("tarjetaDisenio")
 
     tarjetaMemoriaRam.innerHTML = `
     <img src="${Mr.imagen}" width="200"></img>

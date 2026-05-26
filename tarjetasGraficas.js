@@ -97,6 +97,7 @@ graficas.forEach(g => {
     
     // crea un div para almacenar los datos
     let tarjeta = document.createElement("div")
+    tarjeta.classList.add("tarjetaDisenio")
      
     // anade elementos al div
     tarjeta.innerHTML = `
