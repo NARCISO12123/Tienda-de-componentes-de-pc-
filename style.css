@@ -1,21 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: rgb(85, 85, 85);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.nav-links a:hover{
+    color: brown;
+}
+
+.menu{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    nav{
+        justify-content: space-between;
+    }
+
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+
+    }
+    .menu{
+        display: flex;
+    }
+
+    .nav-links.show {
+        display: flex;
+        background-color: black;
+    }
+
+}
+
 body{
-    height: 50vh;
-    width: 50vh;
-    background-color: black;
-    color: aliceblue;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 #contenedorGraficas,
 #contenedorCPU,
 #contenedorRAM{
-    width: 250%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-     margin-bottom: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
 }
 .tarjetaDisenio{
-    border: 2px solid rgb(229, 229, 229);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     padding: 8px;
 }

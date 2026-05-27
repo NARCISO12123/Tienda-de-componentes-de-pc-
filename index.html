@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <title>Componentes Pc</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>    
-    <h1>Componentes Pc RD </h1>
-
-    <!-- Lista de productos de la tienda -->
-     <h3>Productos de la tienda: </h3>
     
-     <ul>
-       <li>Productos</li> 
-       <li>Periferocos de entrada</li>
-       <li>Perifericos de salida</li> 
-     </ul>
+  <header>
+    <nav>
+      <h1>Componentes Pc</h1>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">inicio</a></li>
+        <li><a href="#">acerca de</a></li>
+        <li><a href="#">servicios</a></li>
+        <li><a href="#">contacto</a></li>
+      </ul>
+
+      <div class="menu" id="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
      
-     
-     <!--Contenedores para los productos-->
+     <!-- Contenedores para los productos -->
      <h2>Tarjetas Graficas</h2>
      <div id="contenedorGraficas"></div>
      <h2>Procesadores: </h2>
@@ -26,8 +32,10 @@
      <h2>Memoria RAM: </h2>
      <div id="contenedorRAM"></div>
 
+     
      <script src="tarjetasGraficas.js"></script>
      <script src="procesadores.js"></script>
      <script src="memoriasRAM.js"></script> 
-</body>
+     <script src="funcionamiento.js"></script>
+    </body>
 </html>
