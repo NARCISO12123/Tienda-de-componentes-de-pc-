@@ -103,3 +103,10 @@ body{
     padding: 8px;
 }
 
+.botonCompra{
+    padding: 10px 20px;
+    background-color: rgb(174, 174, 174);
+    color: white;
+    border: none;
+    margin-top: 10px;
+}

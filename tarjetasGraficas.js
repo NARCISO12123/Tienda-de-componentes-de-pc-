@@ -97,6 +97,11 @@ graficas.forEach(g => {
     
     // crea un div para almacenar los datos
     let tarjeta = document.createElement("div")
+    
+    // crea un boton para comprar 
+    let botonCompra = document.createElement("button")
+    botonCompra.textContent = 'Comprar'
+    
     tarjeta.classList.add("tarjetaDisenio")
      
     // anade elementos al div
@@ -108,5 +113,8 @@ graficas.forEach(g => {
     <h3>Memoria Vram: ${g.cantidadDeMemoria}</h3>
     <h3>RGB: ${g.rgb}</h3>
     ` 
+
+    botonCompra.classList.add("botonCompra")
+    tarjeta.appendChild(botonCompra)
     document.getElementById("contenedorGraficas").appendChild(tarjeta) // muestra en pantalla
     })

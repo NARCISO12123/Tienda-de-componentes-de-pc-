@@ -84,6 +84,8 @@ arregloProcesadores.forEach(p => {
     
     // creamos un div para cada procesador
     let tarjetaProcesadores = document.createElement("div"); 
+    let botonCompra = document.createElement("button")
+    botonCompra.textContent = "Comprar"
     tarjetaProcesadores.classList.add("tarjetaDisenio")
 
     tarjetaProcesadores.innerHTML = `
@@ -93,5 +95,7 @@ arregloProcesadores.forEach(p => {
     <h3>Hilos: ${p.hilos}</h3>
     <h3>Frecuencia: ${p.frecuencia}</h3>
     `
+    botonCompra.classList.add("botonCompra")
+    tarjetaProcesadores.appendChild(botonCompra)
    document.getElementById("contenedorCPU").appendChild(tarjetaProcesadores)
 });
