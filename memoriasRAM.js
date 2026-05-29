@@ -74,9 +74,17 @@ let arreglo = [producto01, producto02, producto03, producto04, producto05]
 arreglo.forEach(Mr => {
    
     let tarjetaMemoriaRam = document.createElement("div");
-    let botonCompra = document.createElement('button')
-    botonCompra.textContent = "Comprar"
+    
+    // botones de compra y agregar al carrito 
     tarjetaMemoriaRam.classList.add("tarjetaDisenio")
+
+    let botonCompra = document.createElement('button')
+    let botonCarrito = document.createElement('button')
+
+    botonCarrito.textContent = "Agregar"
+    botonCompra.textContent = "Comprar"
+        
+
 
     tarjetaMemoriaRam.innerHTML = `
     <img src="${Mr.imagen}" width="200"></img>
@@ -85,7 +93,9 @@ arreglo.forEach(Mr => {
     <h3>Frecuencia: ${Mr.frecuencia}</h3>
     <h3>Tipo de memoria: ${Mr.tipoMemoria}</h3>`
     
-    botonCompra.classList.add("botonCompra")
     tarjetaMemoriaRam.appendChild(botonCompra)
+    tarjetaMemoriaRam.appendChild(botonCarrito)
+    CambiarColor(botonCompra, botonCarrito)
    document.getElementById("contenedorRAM").appendChild(tarjetaMemoriaRam)
 })
+

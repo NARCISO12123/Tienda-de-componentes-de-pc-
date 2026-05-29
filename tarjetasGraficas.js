@@ -99,8 +99,13 @@ graficas.forEach(g => {
     let tarjeta = document.createElement("div")
     
     // crea un boton para comprar 
-    let botonCompra = document.createElement("button")
-    botonCompra.textContent = 'Comprar'
+    let botonCompra = document.createElement('button')
+    let botonCarrito = document.createElement('button')
+
+    botonCarrito.textContent = "Agregar"
+    botonCompra.textContent = "Comprar"
+        
+
     
     tarjeta.classList.add("tarjetaDisenio")
      
@@ -113,8 +118,8 @@ graficas.forEach(g => {
     <h3>Memoria Vram: ${g.cantidadDeMemoria}</h3>
     <h3>RGB: ${g.rgb}</h3>
     ` 
-
-    botonCompra.classList.add("botonCompra")
     tarjeta.appendChild(botonCompra)
+    tarjeta.appendChild(botonCarrito)
+    CambiarColor(botonCompra, botonCarrito)
     document.getElementById("contenedorGraficas").appendChild(tarjeta) // muestra en pantalla
-    })
+    })    
