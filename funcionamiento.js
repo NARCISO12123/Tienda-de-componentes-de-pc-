@@ -15,11 +15,11 @@ function CambiarColor(botonCompra, botonCarrito){
   
     // cuando pases por el boton cambia de color
     botonCompra.addEventListener("mouseenter", () => {
-    botonCompra.style.backgroundColor= 'green'
+    botonCompra.style.backgroundColor= ' rgba(0, 77, 135, 0.632)'
    })
 
     botonCarrito.addEventListener('mouseenter', () => {
-    botonCarrito.style.backgroundColor = 'red'
+    botonCarrito.style.backgroundColor = 'brown'
    })
 
    // caundo quitas el mause se quita el color
